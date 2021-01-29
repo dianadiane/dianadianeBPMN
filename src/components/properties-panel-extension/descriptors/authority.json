@@ -1,0 +1,133 @@
+{
+  "name": "self",
+  "uri": "https://self",
+  "prefix": "",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "types": [
+    {
+      "name": "flowable:assigneeOption",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:multiUser",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:fixed",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:userValue",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:orgScope",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+
+
+
+
+
+
+    {
+      "name": "AttrOneProp",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "propName",
+          "type": "String",
+          "isAttr": true
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "isAttr": true
+        }
+      ]
+    },
+    {
+      "name": "AttrTwo",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody": true
+        }
+      ]
+    }
+  ]
+}
