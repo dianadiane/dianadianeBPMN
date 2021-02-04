@@ -1,0 +1,60 @@
+/* 项目自带样式，从各个文件中总结 */
+/* custom-properties-panel */
+.containers {
+    background-color: #ffffff;
+    width: 100%;
+    height: calc(100vh - 52px);
+  }
+  .canvas {
+    width: 100%;
+    height: 100%;
+  }
+  .panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+  }
+
+  /* PropertiesView */
+  .custom-properties-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    padding: 20px;
+  }
+  .empty {
+    height: 200px;
+    line-height: 200px;
+    font-weight: 700;
+  }
+
+/* StartEventPropertiesPanel */
+  .custom-properties-panel input,
+  .custom-properties-panel textarea {
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all 0.3s;
+    outline: none;
+    width: 80%;
+  }
+  .custom-properties-panel input:focus,
+  .custom-properties-panel button:focus,
+  .custom-properties-panel textarea:focus,
+  .custom-properties-panel [contenteditable]:focus {
+    border-color: rgb(239, 112, 96);
+    box-shadow: 0 0 1px 2px rgb(239, 112, 96, 0.2);
+  }
+  .custom-properties-panel label {
+    font-weight: bold;
+  }
+  
+  .custom-properties-panel label:after {
+    content: ": ";
+  }
