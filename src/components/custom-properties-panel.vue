@@ -103,6 +103,7 @@ export default {
           authority: authorityModdleDescriptor,
         },
       });
+      this.$store.state.moduler = this.bpmnModeler;
       this.createNewDiagram();
       // this.selectionChange();
     },
@@ -128,6 +129,9 @@ export default {
       bpmnModeler.on("selection.changed", (e) => {
         let rightPanel = document.getElementById("js-properties-panel");
         console.log("------------------------------------------------");
+        console.log(this);
+        console.log(bpmnModeler);
+        console.log(e.newSelection);
         that.$store.state.selectElement = e.newSelection[0];
         console.log(this);
         console.log(bpmnModeler);

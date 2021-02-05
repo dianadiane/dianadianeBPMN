@@ -7,6 +7,124 @@
   },
   "types": [
     {
+      "name": "flowable:businessType",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:unitId",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:departmentId",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:callable",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:defaultProcess",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:rejectParentProcess",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+    {
+      "name": "flowable:rejectGatewayBefore",
+      "superClass": [
+        "Element"
+      ],
+      "meta": {
+        "allowedIn": [ "*" ]
+      },
+      "properties": [
+        {
+          "name": "value",
+          "type": "String",
+          "isBody":true
+        }
+      ]
+    },
+
+
+
+
+
+
+    {
       "name": "flowable:assigneeOption",
       "superClass": [
         "Element"

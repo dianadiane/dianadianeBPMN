@@ -47,8 +47,7 @@ const store = new Vuex.Store({
             "baseMessage": [],
             "detailMessage": []
         }
-    },
-<<<<<<< HEAD
+    }
     // mutations: {
     //     addUserExtensionElements(state, ploads) {
     //         //ploads = {:this.selectResult,values:}
@@ -76,35 +75,6 @@ const store = new Vuex.Store({
     //         // state.readUsertaskElementextensionElements.userDetail.values[index].$body = changeDetail
     //     }
     // }
-=======
-    mutations: {
-        addUserExtensionElements(state, ploads) {
-            //ploads = {:this.selectResult,values:}
-            //selectResult分配具体方式 和 extensionElementsArr数组
-            let selectResult = ploads.selectResult;//传进来
-            let values = ploads.values
-
-            let user = state.readUsertaskElementextensionElements.user;
-            let org = state.readUsertaskElementextensionElements.org;
-            let role = state.readUsertaskElementextensionElements.role;
-            let position = state.readUsertaskElementextensionElements.position;
-            if (selectResult == "USER") {
-                user = user.concat(values)
-            }
-
-
-            console.log(state.readUsertaskElementextensionElements.user)
-        },
-        changeUser(state,dates) {//dates[需要修改的index，值]
-            let index = dates[0];
-            let changeDetail = dates[1]
-
-            
-            // state.readUsertaskElementextensionElements.user[index] =  changeDetail
-            // state.readUsertaskElementextensionElements.userDetail.values[index].$body = changeDetail
-        }
-    }
->>>>>>> c64718158fcce65940205675eaaff2bae2a01fd5
 })
 
 export default store

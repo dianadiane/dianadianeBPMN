@@ -1,9 +1,6 @@
 <template>
   <div class="custom-properties-panel">
-    <!-- <defaultShow
-      :StartElement="DefaultElement"
-      v-if="isDefaultShow"
-    ></defaultShow> -->
+    <defaultShow v-if="isDefaultShow"></defaultShow>
     <StartPropertiesPanel
       v-if="selecetElementisStartEvent"
       :key="element.id + element.name"
@@ -67,7 +64,7 @@ export default {
   data() {
     return {
       //默认展示开始节点
-      isDefaultShow: true,
+      isDefaultShow: false,
       DefaultElement: null,
       type: "",
       //因为切换同类型组件的时候，右侧面板不能及时切换，所以判断元素id，只要有变化，则重新渲染
@@ -110,7 +107,7 @@ export default {
     this.init();
   },
   components: {
-    // defaultShow,
+    defaultShow,
     StartPropertiesPanel,
     UserTaskPropertiesPanel,
     SignUserTaskPropertiesPanel,
@@ -123,6 +120,7 @@ export default {
     init() {
       const { modeler } = this;
       const that = this;
+      
       console.log(this);
       console.log(modeler);
       console.dir(START_EVENT);
@@ -136,12 +134,17 @@ export default {
 
       // console.log(that.isDefaultShow);
       modeler.on("selection.changed", (e) => {
+        console.log(e);
         this.selectedElements = e.newSelection;
         this.element = e.newSelection[0];
 
         this.$store.state.selectElement = e.newSelection[0];
         //如果点击的背景 this.element = undefined
         if (!this.element) {
+          // this.elementRegistry = this.storeModuler.get("elementRegistry");
+          // let elementList = this.elementRegistry.getAll();
+          // console.log(elementList);
+          this.isDefaultShow = true;
           this.selecetElementisStartEvent = false;
           this.selecetElementisUserTask = false;
           this.selecetElementisSignUserTask = false;
@@ -152,6 +155,7 @@ export default {
           return;
         }
         if (this.element) {
+          this.isDefaultShow = false;
           console.log(this.element);
           console.log(this.element.type);
           this.elementID = this.element.id;
@@ -302,7 +306,12 @@ export default {
         }
       });
       modeler.on("element.changed", (e) => {
+        if (!this.element) {
+          this.isDefaultShow = true;
+          return;
+        }
         if (this.element) {
+          this.isDefaultShow = false;
           console.log(this.element);
           console.log(this.element.type);
           this.type = this.element.type;
