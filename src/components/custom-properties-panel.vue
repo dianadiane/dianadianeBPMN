@@ -47,7 +47,6 @@ import authorityModdleDescriptor from "./properties-panel-extension/descriptors/
 import { xmlStr } from "../mock/xmlStr";
 import { expamle } from "../mock/expamle";
 import { defaultXml } from "../mock/defaultXml"; //空
-
 export default {
   name: "",
   components: {
