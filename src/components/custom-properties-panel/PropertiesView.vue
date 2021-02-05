@@ -6,24 +6,31 @@
     ></defaultShow> -->
     <StartPropertiesPanel
       v-if="selecetElementisStartEvent"
+      :key="element.id + element.name"
     ></StartPropertiesPanel>
     <UserTaskPropertiesPanel
       v-if="selecetElementisUserTask"
+      :key="element.id + element.name"
     ></UserTaskPropertiesPanel>
     <SignUserTaskPropertiesPanel
       v-if="selecetElementisSignUserTask"
+      :key="element.id + element.name"
     ></SignUserTaskPropertiesPanel>
     <SequenceFlowPropertiesPanel
       v-if="selecetElementisSequenceFlow"
+      :key="element.id + element.name"
     ></SequenceFlowPropertiesPanel>
     <GatewayPropertiesPanel
       v-if="selecetElementisGateway"
+      :key="element.id + element.name"
     ></GatewayPropertiesPanel>
     <SubProcessPropertiesPanel
       v-if="selecetElementisSubProcess"
+      :key="element.id + element.name"
     ></SubProcessPropertiesPanel>
     <CallActivityPropertiesPanel
       v-if="selecetElementisCallActivity"
+      :key="element.id + element.name"
     ></CallActivityPropertiesPanel>
   </div>
 </template>
@@ -63,7 +70,8 @@ export default {
       isDefaultShow: true,
       DefaultElement: null,
       type: "",
-
+      //因为切换同类型组件的时候，右侧面板不能及时切换，所以判断元素id，只要有变化，则重新渲染
+      elementID: "",
       selecetElementisStartEvent: false,
       selecetElementisUserTask: false,
       selecetElementisSignUserTask: false,
@@ -146,6 +154,7 @@ export default {
         if (this.element) {
           console.log(this.element);
           console.log(this.element.type);
+          this.elementID = this.element.id;
           if (this.element.businessObject.loopCharacteristics) {
             this.isSerialOrParallel = this.$store.state.readUsertaskElementextensionElements.isSerialOrParallel = true;
             this.selecetElementisStartEvent = false;
