@@ -26,7 +26,13 @@ export var defaultXml =
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" targetNamespace="http://www.flowable.org/processdef">
   <process id="standardProcess" name="标准流程" isExecutable="true">
   <extensionElements>
-
+  <flowable:businessType>CONTRACT</flowable:businessType>
+<flowable:unitId>10297</flowable:unitId>
+<flowable:departmentId>10299</flowable:departmentId >
+<flowable:callable>false</flowable:callable>
+<flowable:defaultProcess>true</flowable:defaultProcess >
+<flowable:rejectParentProcess>false</flowable:rejectParentProcess>
+<flowable:rejectGatewayBefore>false</flowable:rejectGatewayBefore>
  </extensionElements>
 <documentation>这是一个测试模型</documentation>
 

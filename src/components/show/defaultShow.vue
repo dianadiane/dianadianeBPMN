@@ -17,6 +17,7 @@
               class="elementName processNodeName"
               :value="element.businessObject.name"
               @change="(event) => changeField(event, 'name')"
+              @blur="(event) => checkValue(event)"
             />
           </div>
           <div class="element-item clearfix">
@@ -342,6 +343,12 @@ export default {
 
       this.updateProperties(properties); //更新属性
     },
+    checkValue(e){
+      if(e.target.value == ""){
+        alert("名称不能为空")
+        e.target.focus()
+      }
+    },
     addElement(event, type) {
       console.log(this.element);
       const shapeDoc = this.element.businessObject.documentation; // 元素文档
@@ -448,7 +455,9 @@ export default {
     },
   },
   watch: {
-    isExecutable() {},
+    isExecutable() {
+
+    },
   },
 };
 </script>
