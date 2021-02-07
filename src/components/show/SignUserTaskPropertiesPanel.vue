@@ -145,7 +145,7 @@
           >
         </div>
         <div class="element-item">
-          <span>审批意见必填：</span>
+          <span>审批意见：</span>
           <el-radio
             v-model="requireOpinion"
             label="true"
