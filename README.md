@@ -40,8 +40,8 @@ D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\diagram-js\lib\navigation\
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\diagram-js\lib\features\dragging\Dragging.js
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\diagram-js\lib\navigation\zoomscroll\ZoomScroll.js
 
-  //源代码 event.preventDefault();
-  //更改如下
+  > -源代码 event.preventDefault();
+  > -更改如下
   window.addEventListener('touchmove',  function(e){
     e.preventDefault()
   }, 
@@ -50,26 +50,27 @@ D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\diagram-js\lib\navigation\
 
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\lib\features\palette\PaletteProvider.js
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\dist\bpmn-modeler.development.js
-  //源代码的User为Task
-  //更改如下
+> -源代码的User为Task
+> -更改如下
+  ```
 'create.task': createAction(
-      'bpmn:UserTask', 'activity', 'bpmn-icon-task',
-      translate('Create Task')
-    ),
+  'bpmn:UserTask', 'activity', 'bpmn-icon-task',
+    translate('Create Task')
+),
 
- 'create.UserTask': createAction(
-      'bpmn:UserTask', 'activity', 'bpmn-icon-task',
-      translate('Create UserTask')
-    ),
+'create.UserTask': createAction(
+  'bpmn:UserTask', 'activity', 'bpmn-icon-task',
+    translate('Create UserTask')
+),
 
-    'create.UserTask': createAction(
-      'bpmn:UserTask', 'activity', 'bpmn-icon-Usertask',
-      translate('Create UserTask')
-    ),
+'create.UserTask': createAction(
+  'bpmn:UserTask', 'activity', 'bpmn-icon-Usertask',
+    translate('Create UserTask')
+),
+```
+D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\dist\bpmn-modeler.production.min.js
 
-  D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\dist\bpmn-modeler.production.min.js
-
-				"create.UserTask": p("bpmn:UserTask", "activity", "bpmn-icon-Usertask", c("Create UserTask")),
+"create.UserTask": p("bpmn:UserTask", "activity", "bpmn-icon-Usertask", c("Create UserTask")),
 
 ### 四、流程设计器问题总结
 1)、技术难题：
