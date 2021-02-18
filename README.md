@@ -31,7 +31,7 @@
 
 ### 二、运行说明
 #### 1、步骤
-- 运行`git clone` 克隆仓库
+- 运行`git clone https://github.com/phoenixyuanying/WorkflowModelPlus.git`
 - 进入项目文件夹
 - 运行 `npm install` 安装依赖
 - 运行 `npm run start`启动本地服务
