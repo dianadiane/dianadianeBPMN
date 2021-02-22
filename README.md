@@ -49,7 +49,7 @@ D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\diagram-js\lib\navigation\
   }, 
   { passive: false })
 
-
+-------
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\lib\features\palette\PaletteProvider.js
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\dist\bpmn-modeler.development.js
 > -源代码的User为Task
@@ -70,10 +70,28 @@ D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\dist\bpmn-modeler.
     translate('Create UserTask')
 ),
 ```
+-------
 D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\dist\bpmn-modeler.production.min.js
 
 "create.UserTask": p("bpmn:UserTask", "activity", "bpmn-icon-Usertask", c("Create UserTask")),
 
+-------面板上的创建UserTask功能
+D:\bpmn\案例\bpmn-vue-properties-panel\node_modules\bpmn-js\lib\features\context-pad\ContextPadProvider.js
+> -源代码的Task改为UserTask
+> -更改如下
+```
+ 'append.append-task': appendAction(
+    'bpmn:Task',
+    'bpmn-icon-task',
+    translate('Append Task')
+)
+
+'append.append-task': appendAction(
+  'bpmn:UserTask',
+  'bpmn-icon-task',
+  translate('Append Task')
+),
+```
 ### 四、流程设计器问题总结
 1)、技术难题：
 新标签，新属性，无法识别“<”和“>”； 
